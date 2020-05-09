@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EuroScorer</title>
+    <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/eurovision2020-ea486.appspot.com/o/logo-Eurovision2020.jpg?alt=media&token=26c029f8-ef6f-4e8e-a448-da57701ffb8c" />
+    <!--[if lte IE 8]-->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="stickybits/dist/stickybits.min.js"></script>
+
+<!--    <link rel="stylesheet" href="css/skel.css"/>-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-xlarge.css"/>
+    <link rel="stylesheet" href="css/popup.css"/>
+    <link rel="stylesheet" href="css/intlTelInput.css">
+
+</head>
+<body class="landing">
+<!-- Header -->
+<header id="header" class="skel-layers-fixed">
+    <h1><a href="index.html">EuroScorer - Home</a></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+
+</br>
+<!-- Form -->
+<section class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Televoting</h2>
+        </header>
+
+        <form id="formulaire">
+            <div class="row" id="voting"></div>
+            <!-- Ajout des candidats dans mainVote.js-->
+            <div class="bottomDiv">
+                <div class="row uniform" id="votingFinal">
+                    <div class="12u">
+                        <ul class="actions">
+                            <li><input type="button" value="Vote" onClick="envoieData()"/></li>
+                            <li><input type="button" onClick="reset3()" value="Reset"></li>
+                            <li><span> My number of votes : </span></li>
+                            <li><span id="monCptTotal"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<div w3-include-html="footer.html"></div>
+
+<!-- Pop-up -->
+<div class="bg-modal" id="bg-modal">
+    <div class="modal-content" id="myPopUp">
+        <div class="inner">
+            <h2>Authentification</h2>
+            <h3>before voting for EUROVISION </h3>
+            <h4>Online Edition for the Fans</h4>
+        </div>
+        <span id="btnclose" class="btnClose"
+              onClick="closeBtn()">
+            <div class="icon fa-times-circle"></div>
+        </span>
+        <form class="myForm">
+            <span> Enter your phone number </span></br>
+            <input type="tel" id="phone" placeholder="+33622335566">
+            </br>
+            </br>
+
+            <div id="recaptcha-container" align="center"></div>
+            </br>
+            <input type="button" onclick="auth()" value="Send message">
+            </br>
+
+        </form>
+
+
+        <form id="formverif">
+            <div id="divverif">
+                <span> Enter the code sent by message </span></br>
+                <input type="text" id="verificationCode" placeholder="your code">
+                </br>
+                <input type="button" id="btnverif" onClick="codeverify(tabCpt)" value="Check code">
+                </br>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<!-- Add all part separte in other page html-->
+
+<script>includeHTML()</script>
+<script src="js/mainVote.js"></script>
+<script src="js/intlTelInput.js"></script>
+
+<script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+     
+    });
+
+
+</script>
+</body>
+
+</html>
+

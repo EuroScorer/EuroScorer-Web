@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EuroScorer</title>
+    <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/eurovision2020-ea486.appspot.com/o/logo-Eurovision2020.jpg?alt=media&token=26c029f8-ef6f-4e8e-a448-da57701ffb8c" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-storage.js"></script>
+   
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <!-- script for template   -->
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/includeHTML.js"></script>
+    
+
+<!--    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />-->
+
+<!--    <link rel="stylesheet" href="css/skel.css" />-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-xlarge.css" />
+    <link rel="stylesheet" href="css/popup.css"/>
+
+  </head>
+  <body class="landing">
+
+  <!-- Header -->
+  <header id="header" class="alt skel-layers-fixed">
+    <h1><a href="index.html">EuroScorer - Home</a></h1>
+    <nav id="nav">
+      <ul>
+        <li><a href="vote.html">Vote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section id="banner">
+    <div class="inner">
+      <h2>EuroScorer</h2>
+      <p>Online Edition for the Fans</p>
+      
+      <ul class="actions">
+          <li><a href="vote.html" class="button big scrolly">Vote</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="three" class="wrapper style1">
+    <div class="container">
+      <header class="major">
+        <h2>The candidates</h2>
+        <p>EuroScorer online Edition for the Fans Final Candidates Presentation</p>
+      </header>
+      <div class="row" id="tst">
+        <!-- Candidates added by JavaScrip mainIndex.js-->
+      </div>
+    </div>
+  </section>
+
+
+    <div w3-include-html="footer.html"></div>
+
+
+  <div id="bg-modal" class="bg-modal" >
+    <!--  <div class="modal-content">
+        <h2>EUROVISION</h2>
+        <span id="btnclose" class="btnClose"
+              onClick="closeBtn()">
+              <div class="icon fa-times-circle"></div>
+          </span>
+        <h3 id="countryYt"></h3>
+        <p id="song"></p>
+
+        <div class="align-center" id="divpopup">
+          &lt;!&ndash;    <iframe id = "ytLink" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&ndash;&gt;
+
+        </div>
+
+      </div>-->
+    </div>
+
+  <noscript>To use this website thank's to activate JavaScript / Pour utiliser ce site, merci d'activer JavaScript.</noscript>
+  <script src="js/mainIndex.js"></script>
+
+  <!-- Add all part separte in other page html-->
+  <script>includeHTML()</script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 avr. 2020, 18:34:28
+    Author     : Ludivine
+*/
+
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding-top: 15%;
+    overflow:auto;
+    
+}
+
+.modal-content{
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    position: relative;
+ 
+}
+input{
+    font-size: 12pt;
+
+}
+
+
+.btnClose{
+    position: absolute;
+    top:1%;
+    right: 1%;
+    font-size: 250%;
+    /*transform: rotate(45deg);*/
+    cursor: pointer;
+}
