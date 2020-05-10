@@ -12,7 +12,7 @@ const myDim = 200;
 
 //For display singers and their musics
 const getIdVoting = document.getElementById("voting");
-const reqSong = 'https://us-central1-eurovision2020-ea486.cloudfunctions.net/api/v1/songs';
+const reqSong = 'https://api.euroscorer2020.com/v1/songs';
 const req = new XMLHttpRequest();
 
 req.open('GET', reqSong);
@@ -24,7 +24,7 @@ req.onload = function () {
 }
 
 //Initialize the link for send the votes
-const reqVotes = 'https://us-central1-eurovision2020-ea486.cloudfunctions.net/api/v1/vote'
+const reqVotes = 'https://api.euroscorer2020.com/v1/vote'
 
 //Initialize/Display the total counter
 document.getElementById("monCptTotal").innerHTML = monCptTotal

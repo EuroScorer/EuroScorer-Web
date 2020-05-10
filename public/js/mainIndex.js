@@ -8,7 +8,8 @@ const getIdTst = document.getElementById("tst");
 const myDim = 200;
 
 // url of API REST to get the element
-const reqSong = 'https://us-central1-eurovision2020-ea486.cloudfunctions.net/api/v1/songs';
+
+const reqSong = 'https://api.euroscorer2020.com/v1/songs';
 const req = new XMLHttpRequest();
 req.open('GET', reqSong);
 req.responseType = "json";
